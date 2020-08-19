@@ -18,5 +18,5 @@ ignore:
   - "injection.dart"
   - "injection.iconfig.dart"
   - "lib/src/domain/entities"
-  - "lib/src/domain/models/discover_movies/discover_movie_model.freezed.dart"
-  - "lib/src/domain/models/discover_movies/movie_result_model.freezed.freezed.dart"
+  - "lib/src/data/models/discover_movies/discover_movie_model.freezed.dart"
+  - "lib/src/data/models/discover_movies/movie_result_model.freezed.freezed.dart"
