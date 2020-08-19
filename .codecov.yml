@@ -11,8 +11,8 @@ comment:
   behavior: default
 
 ignore:
-  - "lib/core/error"
-  - "lib/core/di"
+  - "lib/src/core/error"
+  - "lib/src/core/di"
   - "api_key.dart"
   - "base_url.dart"
   - "injection.dart"
