@@ -1,16 +1,2 @@
-# the_movie_wiki
-
-The Movie Wiki
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# The Movie Wiki
+[![Build Status](https://travis-ci.org/DLutrix/the_movie_wiki.svg?branch=master)](https://travis-ci.org/DLutrix/the_movie_wiki) [![codecov](https://codecov.io/gh/DLutrix/the_movie_wiki/branch/master/graph/badge.svg)](https://codecov.io/gh/DLutrix/the_movie_wiki) ![GitHub language count](https://img.shields.io/github/languages/count/DLutrix/the_movie_wiki) ![GitHub top language](https://img.shields.io/github/languages/top/DLutrix/the_movie_wiki) ![GitHub](https://img.shields.io/github/license/DLutrix/the_movie_wiki)
