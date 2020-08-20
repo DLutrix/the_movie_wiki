@@ -352,24 +352,24 @@ class _$DiscoverMovieStateTearOff {
   const _$DiscoverMovieStateTearOff();
 
 // ignore: unused_element
-  _Initial initial() {
-    return _Initial();
+  Initial initial() {
+    return Initial();
   }
 
 // ignore: unused_element
-  _Loading loading() {
-    return _Loading();
+  Loading loading() {
+    return Loading();
   }
 
 // ignore: unused_element
-  _Loaded loaded(
+  Loaded loaded(
       {@required List<MovieResult> results,
       @required bool isEndOfResult,
       @required bool isLoading,
       @required bool isError,
       @required String errorMessage,
       @required bool isLoadData}) {
-    return _Loaded(
+    return Loaded(
       results: results,
       isEndOfResult: isEndOfResult,
       isLoading: isLoading,
@@ -380,8 +380,8 @@ class _$DiscoverMovieStateTearOff {
   }
 
 // ignore: unused_element
-  _Error error({@required String errorMessage}) {
-    return _Error(
+  Error error({@required String errorMessage}) {
+    return Error(
       errorMessage: errorMessage,
     );
   }
@@ -411,17 +411,17 @@ mixin _$DiscoverMovieState {
   });
   @optionalTypeArgs
   Result map<Result extends Object>({
-    @required Result initial(_Initial value),
-    @required Result loading(_Loading value),
-    @required Result loaded(_Loaded value),
-    @required Result error(_Error value),
+    @required Result initial(Initial value),
+    @required Result loading(Loading value),
+    @required Result loaded(Loaded value),
+    @required Result error(Error value),
   });
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
-    Result initial(_Initial value),
-    Result loading(_Loading value),
-    Result loaded(_Loaded value),
-    Result error(_Error value),
+    Result initial(Initial value),
+    Result loading(Loading value),
+    Result loaded(Loaded value),
+    Result error(Error value),
     @required Result orElse(),
   });
 }
@@ -441,23 +441,22 @@ class _$DiscoverMovieStateCopyWithImpl<$Res>
   final $Res Function(DiscoverMovieState) _then;
 }
 
-abstract class _$InitialCopyWith<$Res> {
-  factory _$InitialCopyWith(_Initial value, $Res Function(_Initial) then) =
-      __$InitialCopyWithImpl<$Res>;
+abstract class $InitialCopyWith<$Res> {
+  factory $InitialCopyWith(Initial value, $Res Function(Initial) then) =
+      _$InitialCopyWithImpl<$Res>;
 }
 
-class __$InitialCopyWithImpl<$Res>
-    extends _$DiscoverMovieStateCopyWithImpl<$Res>
-    implements _$InitialCopyWith<$Res> {
-  __$InitialCopyWithImpl(_Initial _value, $Res Function(_Initial) _then)
-      : super(_value, (v) => _then(v as _Initial));
+class _$InitialCopyWithImpl<$Res> extends _$DiscoverMovieStateCopyWithImpl<$Res>
+    implements $InitialCopyWith<$Res> {
+  _$InitialCopyWithImpl(Initial _value, $Res Function(Initial) _then)
+      : super(_value, (v) => _then(v as Initial));
 
   @override
-  _Initial get _value => super._value as _Initial;
+  Initial get _value => super._value as Initial;
 }
 
-class _$_Initial implements _Initial {
-  _$_Initial();
+class _$Initial implements Initial {
+  _$Initial();
 
   @override
   String toString() {
@@ -466,7 +465,7 @@ class _$_Initial implements _Initial {
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is _Initial);
+    return identical(this, other) || (other is Initial);
   }
 
   @override
@@ -509,10 +508,10 @@ class _$_Initial implements _Initial {
   @override
   @optionalTypeArgs
   Result map<Result extends Object>({
-    @required Result initial(_Initial value),
-    @required Result loading(_Loading value),
-    @required Result loaded(_Loaded value),
-    @required Result error(_Error value),
+    @required Result initial(Initial value),
+    @required Result loading(Loading value),
+    @required Result loaded(Loaded value),
+    @required Result error(Error value),
   }) {
     assert(initial != null);
     assert(loading != null);
@@ -524,10 +523,10 @@ class _$_Initial implements _Initial {
   @override
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
-    Result initial(_Initial value),
-    Result loading(_Loading value),
-    Result loaded(_Loaded value),
-    Result error(_Error value),
+    Result initial(Initial value),
+    Result loading(Loading value),
+    Result loaded(Loaded value),
+    Result error(Error value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -538,27 +537,26 @@ class _$_Initial implements _Initial {
   }
 }
 
-abstract class _Initial implements DiscoverMovieState {
-  factory _Initial() = _$_Initial;
+abstract class Initial implements DiscoverMovieState {
+  factory Initial() = _$Initial;
 }
 
-abstract class _$LoadingCopyWith<$Res> {
-  factory _$LoadingCopyWith(_Loading value, $Res Function(_Loading) then) =
-      __$LoadingCopyWithImpl<$Res>;
+abstract class $LoadingCopyWith<$Res> {
+  factory $LoadingCopyWith(Loading value, $Res Function(Loading) then) =
+      _$LoadingCopyWithImpl<$Res>;
 }
 
-class __$LoadingCopyWithImpl<$Res>
-    extends _$DiscoverMovieStateCopyWithImpl<$Res>
-    implements _$LoadingCopyWith<$Res> {
-  __$LoadingCopyWithImpl(_Loading _value, $Res Function(_Loading) _then)
-      : super(_value, (v) => _then(v as _Loading));
+class _$LoadingCopyWithImpl<$Res> extends _$DiscoverMovieStateCopyWithImpl<$Res>
+    implements $LoadingCopyWith<$Res> {
+  _$LoadingCopyWithImpl(Loading _value, $Res Function(Loading) _then)
+      : super(_value, (v) => _then(v as Loading));
 
   @override
-  _Loading get _value => super._value as _Loading;
+  Loading get _value => super._value as Loading;
 }
 
-class _$_Loading implements _Loading {
-  _$_Loading();
+class _$Loading implements Loading {
+  _$Loading();
 
   @override
   String toString() {
@@ -567,7 +565,7 @@ class _$_Loading implements _Loading {
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is _Loading);
+    return identical(this, other) || (other is Loading);
   }
 
   @override
@@ -610,10 +608,10 @@ class _$_Loading implements _Loading {
   @override
   @optionalTypeArgs
   Result map<Result extends Object>({
-    @required Result initial(_Initial value),
-    @required Result loading(_Loading value),
-    @required Result loaded(_Loaded value),
-    @required Result error(_Error value),
+    @required Result initial(Initial value),
+    @required Result loading(Loading value),
+    @required Result loaded(Loaded value),
+    @required Result error(Error value),
   }) {
     assert(initial != null);
     assert(loading != null);
@@ -625,10 +623,10 @@ class _$_Loading implements _Loading {
   @override
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
-    Result initial(_Initial value),
-    Result loading(_Loading value),
-    Result loaded(_Loaded value),
-    Result error(_Error value),
+    Result initial(Initial value),
+    Result loading(Loading value),
+    Result loaded(Loaded value),
+    Result error(Error value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -639,13 +637,13 @@ class _$_Loading implements _Loading {
   }
 }
 
-abstract class _Loading implements DiscoverMovieState {
-  factory _Loading() = _$_Loading;
+abstract class Loading implements DiscoverMovieState {
+  factory Loading() = _$Loading;
 }
 
-abstract class _$LoadedCopyWith<$Res> {
-  factory _$LoadedCopyWith(_Loaded value, $Res Function(_Loaded) then) =
-      __$LoadedCopyWithImpl<$Res>;
+abstract class $LoadedCopyWith<$Res> {
+  factory $LoadedCopyWith(Loaded value, $Res Function(Loaded) then) =
+      _$LoadedCopyWithImpl<$Res>;
   $Res call(
       {List<MovieResult> results,
       bool isEndOfResult,
@@ -655,13 +653,13 @@ abstract class _$LoadedCopyWith<$Res> {
       bool isLoadData});
 }
 
-class __$LoadedCopyWithImpl<$Res> extends _$DiscoverMovieStateCopyWithImpl<$Res>
-    implements _$LoadedCopyWith<$Res> {
-  __$LoadedCopyWithImpl(_Loaded _value, $Res Function(_Loaded) _then)
-      : super(_value, (v) => _then(v as _Loaded));
+class _$LoadedCopyWithImpl<$Res> extends _$DiscoverMovieStateCopyWithImpl<$Res>
+    implements $LoadedCopyWith<$Res> {
+  _$LoadedCopyWithImpl(Loaded _value, $Res Function(Loaded) _then)
+      : super(_value, (v) => _then(v as Loaded));
 
   @override
-  _Loaded get _value => super._value as _Loaded;
+  Loaded get _value => super._value as Loaded;
 
   @override
   $Res call({
@@ -672,7 +670,7 @@ class __$LoadedCopyWithImpl<$Res> extends _$DiscoverMovieStateCopyWithImpl<$Res>
     Object errorMessage = freezed,
     Object isLoadData = freezed,
   }) {
-    return _then(_Loaded(
+    return _then(Loaded(
       results:
           results == freezed ? _value.results : results as List<MovieResult>,
       isEndOfResult: isEndOfResult == freezed
@@ -689,8 +687,8 @@ class __$LoadedCopyWithImpl<$Res> extends _$DiscoverMovieStateCopyWithImpl<$Res>
   }
 }
 
-class _$_Loaded implements _Loaded {
-  _$_Loaded(
+class _$Loaded implements Loaded {
+  _$Loaded(
       {@required this.results,
       @required this.isEndOfResult,
       @required this.isLoading,
@@ -725,7 +723,7 @@ class _$_Loaded implements _Loaded {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _Loaded &&
+        (other is Loaded &&
             (identical(other.results, results) ||
                 const DeepCollectionEquality()
                     .equals(other.results, results)) &&
@@ -757,8 +755,8 @@ class _$_Loaded implements _Loaded {
       const DeepCollectionEquality().hash(isLoadData);
 
   @override
-  _$LoadedCopyWith<_Loaded> get copyWith =>
-      __$LoadedCopyWithImpl<_Loaded>(this, _$identity);
+  $LoadedCopyWith<Loaded> get copyWith =>
+      _$LoadedCopyWithImpl<Loaded>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -799,10 +797,10 @@ class _$_Loaded implements _Loaded {
   @override
   @optionalTypeArgs
   Result map<Result extends Object>({
-    @required Result initial(_Initial value),
-    @required Result loading(_Loading value),
-    @required Result loaded(_Loaded value),
-    @required Result error(_Error value),
+    @required Result initial(Initial value),
+    @required Result loading(Loading value),
+    @required Result loaded(Loaded value),
+    @required Result error(Error value),
   }) {
     assert(initial != null);
     assert(loading != null);
@@ -814,10 +812,10 @@ class _$_Loaded implements _Loaded {
   @override
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
-    Result initial(_Initial value),
-    Result loading(_Loading value),
-    Result loaded(_Loaded value),
-    Result error(_Error value),
+    Result initial(Initial value),
+    Result loading(Loading value),
+    Result loaded(Loaded value),
+    Result error(Error value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -828,14 +826,14 @@ class _$_Loaded implements _Loaded {
   }
 }
 
-abstract class _Loaded implements DiscoverMovieState {
-  factory _Loaded(
+abstract class Loaded implements DiscoverMovieState {
+  factory Loaded(
       {@required List<MovieResult> results,
       @required bool isEndOfResult,
       @required bool isLoading,
       @required bool isError,
       @required String errorMessage,
-      @required bool isLoadData}) = _$_Loaded;
+      @required bool isLoadData}) = _$Loaded;
 
   List<MovieResult> get results;
   bool get isEndOfResult;
@@ -843,28 +841,28 @@ abstract class _Loaded implements DiscoverMovieState {
   bool get isError;
   String get errorMessage;
   bool get isLoadData;
-  _$LoadedCopyWith<_Loaded> get copyWith;
+  $LoadedCopyWith<Loaded> get copyWith;
 }
 
-abstract class _$ErrorCopyWith<$Res> {
-  factory _$ErrorCopyWith(_Error value, $Res Function(_Error) then) =
-      __$ErrorCopyWithImpl<$Res>;
+abstract class $ErrorCopyWith<$Res> {
+  factory $ErrorCopyWith(Error value, $Res Function(Error) then) =
+      _$ErrorCopyWithImpl<$Res>;
   $Res call({String errorMessage});
 }
 
-class __$ErrorCopyWithImpl<$Res> extends _$DiscoverMovieStateCopyWithImpl<$Res>
-    implements _$ErrorCopyWith<$Res> {
-  __$ErrorCopyWithImpl(_Error _value, $Res Function(_Error) _then)
-      : super(_value, (v) => _then(v as _Error));
+class _$ErrorCopyWithImpl<$Res> extends _$DiscoverMovieStateCopyWithImpl<$Res>
+    implements $ErrorCopyWith<$Res> {
+  _$ErrorCopyWithImpl(Error _value, $Res Function(Error) _then)
+      : super(_value, (v) => _then(v as Error));
 
   @override
-  _Error get _value => super._value as _Error;
+  Error get _value => super._value as Error;
 
   @override
   $Res call({
     Object errorMessage = freezed,
   }) {
-    return _then(_Error(
+    return _then(Error(
       errorMessage: errorMessage == freezed
           ? _value.errorMessage
           : errorMessage as String,
@@ -872,8 +870,8 @@ class __$ErrorCopyWithImpl<$Res> extends _$DiscoverMovieStateCopyWithImpl<$Res>
   }
 }
 
-class _$_Error implements _Error {
-  _$_Error({@required this.errorMessage}) : assert(errorMessage != null);
+class _$Error implements Error {
+  _$Error({@required this.errorMessage}) : assert(errorMessage != null);
 
   @override
   final String errorMessage;
@@ -886,7 +884,7 @@ class _$_Error implements _Error {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _Error &&
+        (other is Error &&
             (identical(other.errorMessage, errorMessage) ||
                 const DeepCollectionEquality()
                     .equals(other.errorMessage, errorMessage)));
@@ -897,8 +895,8 @@ class _$_Error implements _Error {
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(errorMessage);
 
   @override
-  _$ErrorCopyWith<_Error> get copyWith =>
-      __$ErrorCopyWithImpl<_Error>(this, _$identity);
+  $ErrorCopyWith<Error> get copyWith =>
+      _$ErrorCopyWithImpl<Error>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -937,10 +935,10 @@ class _$_Error implements _Error {
   @override
   @optionalTypeArgs
   Result map<Result extends Object>({
-    @required Result initial(_Initial value),
-    @required Result loading(_Loading value),
-    @required Result loaded(_Loaded value),
-    @required Result error(_Error value),
+    @required Result initial(Initial value),
+    @required Result loading(Loading value),
+    @required Result loaded(Loaded value),
+    @required Result error(Error value),
   }) {
     assert(initial != null);
     assert(loading != null);
@@ -952,10 +950,10 @@ class _$_Error implements _Error {
   @override
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
-    Result initial(_Initial value),
-    Result loading(_Loading value),
-    Result loaded(_Loaded value),
-    Result error(_Error value),
+    Result initial(Initial value),
+    Result loading(Loading value),
+    Result loaded(Loaded value),
+    Result error(Error value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -966,9 +964,9 @@ class _$_Error implements _Error {
   }
 }
 
-abstract class _Error implements DiscoverMovieState {
-  factory _Error({@required String errorMessage}) = _$_Error;
+abstract class Error implements DiscoverMovieState {
+  factory Error({@required String errorMessage}) = _$Error;
 
   String get errorMessage;
-  _$ErrorCopyWith<_Error> get copyWith;
+  $ErrorCopyWith<Error> get copyWith;
 }

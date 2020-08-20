@@ -17,7 +17,7 @@ part 'discover_movie_state.dart';
 class DiscoverMovieBloc extends Bloc<DiscoverMovieEvent, DiscoverMovieState> {
   DiscoverMovieBloc(
     this._getDiscoverMovie,
-  ) : super(_Initial());
+  ) : super(Initial());
 
   final GetDiscoverMovie _getDiscoverMovie;
 
@@ -40,17 +40,17 @@ class DiscoverMovieBloc extends Bloc<DiscoverMovieEvent, DiscoverMovieState> {
     yield* event.map(
       getMovieData: (e) async* {
         if (!_isEndOfResult(state)) {
-          if (currentState is _Initial) {
+          if (currentState is Initial) {
             yield* _mapInitialAndErrorState(e);
-          } else if (currentState is _Loaded) {
+          } else if (currentState is Loaded) {
             yield* _mapLoadedState(e, currentState);
-          } else if (currentState is _Error) {
+          } else if (currentState is Error) {
             yield* _mapInitialAndErrorState(e);
           }
         }
       },
       getMovieDataRetry: (e) async* {
-        if (currentState is _Loaded && currentState.isError == true) {
+        if (currentState is Loaded && currentState.isError == true) {
           yield* _mapRetryToState(e, currentState);
         }
       },
@@ -58,7 +58,7 @@ class DiscoverMovieBloc extends Bloc<DiscoverMovieEvent, DiscoverMovieState> {
   }
 
   bool _isEndOfResult(DiscoverMovieState state) =>
-      state is _Loaded && state.isEndOfResult;
+      state is Loaded && state.isEndOfResult;
 
   Stream<DiscoverMovieState> _mapInitialAndErrorState(
     _GetMovieData e,
@@ -94,7 +94,7 @@ class DiscoverMovieBloc extends Bloc<DiscoverMovieEvent, DiscoverMovieState> {
 
   Stream<DiscoverMovieState> _mapLoadedState(
     _GetMovieData e,
-    _Loaded currentState,
+    Loaded currentState,
   ) async* {
     yield DiscoverMovieState.loaded(
       results: currentState.results,
@@ -139,7 +139,7 @@ class DiscoverMovieBloc extends Bloc<DiscoverMovieEvent, DiscoverMovieState> {
 
   Stream<DiscoverMovieState> _mapRetryToState(
     _GetMovieDataRetry e,
-    _Loaded currentState,
+    Loaded currentState,
   ) async* {
     yield DiscoverMovieState.loaded(
       results: currentState.results,
