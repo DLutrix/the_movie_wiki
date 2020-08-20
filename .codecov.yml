@@ -20,3 +20,4 @@ ignore:
   - "lib/src/domain/entities"
   - "lib/src/data/models/discover_movies/discover_movie_model.freezed.dart"
   - "lib/src/data/models/discover_movies/movie_result_model.freezed.dart"
+  - "lib/src/ui/discover_movies/bloc/discover_movie_bloc.freezed.dart"
