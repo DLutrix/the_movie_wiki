@@ -1,10 +1,10 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter/foundation.dart';
 import 'package:injectable/injectable.dart';
-import 'package:the_movie_wiki/src/core/network/network_info.dart';
 
 import '../../../core/error/exception.dart';
 import '../../../core/error/failure.dart';
+import '../../../core/network/network_info.dart';
 import '../../../data/models/discover_movies/discover_movie_model.dart';
 import '../../../domain/entities/discover_movies/discover_movie.dart';
 import '../../../domain/repositories/discover_movies/discover_movie_repository.dart';
