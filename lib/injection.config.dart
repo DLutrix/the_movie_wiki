@@ -9,6 +9,7 @@ import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
 import 'package:injectable/injectable.dart';
 
+import 'src/ui/discover_movies/bloc/discover_movie_bloc.dart';
 import 'src/data/datasource/discover_movies/discover_movies_remote_data_source.dart';
 import 'src/domain/repositories/discover_movies/discover_movie_repository.dart';
 import 'src/data/repositories/discover_movies/discover_movie_repository_impl.dart';
@@ -37,6 +38,8 @@ GetIt $initGetIt(
       get<DiscoverMovieRemoteDataSource>(), get<NetworkInfo>()));
   gh.lazySingleton<GetDiscoverMovie>(
       () => GetDiscoverMovie(get<DiscoverMovieRepository>()));
+  gh.factory<DiscoverMovieBloc>(
+      () => DiscoverMovieBloc(get<GetDiscoverMovie>()));
   return get;
 }
 
