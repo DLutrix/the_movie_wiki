@@ -20,15 +20,17 @@ ignore:
   - "injection.dart"
   - "injection.iconfig.dart"
   - "lib/src/domain/entities"
+  - "lib/src/ui/core"
   - "lib/src/data/models/discover_movies/discover_movie_model.freezed.dart"
   - "lib/src/data/models/discover_movies/movie_result_model.freezed.dart"
-  - "lib/src/ui/core"
   - "lib/src/ui/discover_movies/bloc/discover_movie_bloc.freezed.dart"
   - "lib/src/ui/discover_movies/pages"
   - "lib/src/ui/discover_movies/widgets"
   - "lib/src/data/models/discover_tv_shows/discover_tv_show_model.freezed.dart"
   - "lib/src/data/models/discover_tv_shows/tv_show_result_model.freezed.dart"
-
+  - "lib/src/ui/discover_tv_shows/bloc/discover_tv_show_bloc.freezed.dart"
+  - "lib/src/ui/discover_tv_shows/pages"
+  - "lib/src/ui/discover_tv_shows/widgets"
 
 
 
