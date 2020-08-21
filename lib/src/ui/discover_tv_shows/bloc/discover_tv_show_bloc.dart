@@ -5,9 +5,9 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
 import 'package:rxdart/rxdart.dart';
 
-import '../../../../core/extension/extension_helper.dart';
-import '../../../../domain/entities/discover_tv_shows/tv_show_result.dart';
-import '../../../../domain/usecases/discover_tv_shows/get_discover_tv_show.dart';
+import '../../../core/extension/extension_helper.dart';
+import '../../../domain/entities/discover_tv_shows/tv_show_result.dart';
+import '../../../domain/usecases/discover_tv_shows/get_discover_tv_show.dart';
 
 part 'discover_tv_show_bloc.freezed.dart';
 part 'discover_tv_show_event.dart';

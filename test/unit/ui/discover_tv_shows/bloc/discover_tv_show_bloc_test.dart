@@ -7,7 +7,7 @@ import 'package:mockito/mockito.dart';
 import 'package:the_movie_wiki/src/core/error/failure.dart';
 import 'package:the_movie_wiki/src/data/models/discover_tv_shows/discover_tv_show_model.dart';
 import 'package:the_movie_wiki/src/domain/usecases/discover_tv_shows/get_discover_tv_show.dart';
-import 'package:the_movie_wiki/src/ui/discover_tv_shows/bloc/bloc/discover_tv_show_bloc.dart';
+import 'package:the_movie_wiki/src/ui/discover_tv_shows/bloc/discover_tv_show_bloc.dart';
 
 import '../../../../fixtures/fixture_reader.dart';
 

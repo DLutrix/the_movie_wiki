@@ -13,7 +13,7 @@ import 'src/ui/discover_movies/bloc/discover_movie_bloc.dart';
 import 'src/data/datasource/discover_movies/discover_movies_remote_data_source.dart';
 import 'src/domain/repositories/discover_movies/discover_movie_repository.dart';
 import 'src/data/repositories/discover_movies/discover_movie_repository_impl.dart';
-import 'src/ui/discover_tv_shows/bloc/bloc/discover_tv_show_bloc.dart';
+import 'src/ui/discover_tv_shows/bloc/discover_tv_show_bloc.dart';
 import 'src/data/datasource/discover_tv_shows/discover_tv_show_remote_data_source.dart';
 import 'src/domain/repositories/discover_tv_shows/discover_tv_show_repository.dart';
 import 'src/data/repositories/discover_tv_shows/discover_tv_show_repository_impl.dart';
