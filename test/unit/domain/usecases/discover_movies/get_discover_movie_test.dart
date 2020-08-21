@@ -7,7 +7,7 @@ import 'package:the_movie_wiki/src/data/models/discover_movies/discover_movie_mo
 import 'package:the_movie_wiki/src/domain/repositories/discover_movies/discover_movie_repository.dart';
 import 'package:the_movie_wiki/src/domain/usecases/discover_movies/get_discover_movie.dart';
 
-import '../../../fixtures/fixture_reader.dart';
+import '../../../../fixtures/fixture_reader.dart';
 
 class MockDiscoverMovieRepository extends Mock
     implements DiscoverMovieRepository {}
