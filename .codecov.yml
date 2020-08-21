@@ -26,6 +26,8 @@ ignore:
   - "lib/src/ui/discover_movies/bloc/discover_movie_bloc.freezed.dart"
   - "lib/src/ui/discover_movies/pages"
   - "lib/src/ui/discover_movies/widgets"
+  - "lib/src/data/models/discover_tv_shows/discover_tv_show_model.freezed.dart"
+  - "lib/src/data/models/discover_tv_shows/tv_show_result_model.freezed.dart"
 
 
 
