@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../discover_movies/pages/movie_page.dart';
+import '../../discover_tv_shows/pages/tv_show_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({
@@ -17,7 +18,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   final _page = [
     const MoviePage(),
-    const MoviePage(),
+    const TvShowPage(),
     const MoviePage(),
     const MoviePage(),
     const MoviePage(),
