@@ -27,13 +27,13 @@ class _MoviePageState extends State<MoviePage> {
       length: 4,
       child: Scaffold(
         appBar: AppBar(
+          shape: Border(bottom: BorderSide(color: Colors.white10)),
           brightness: Brightness.dark,
           elevation: 8,
           backgroundColor: const Color(0XFF0D0C11),
           title: Material(
             color: const Color(0XFF0D0C11),
             child: TabBar(
-              indicatorSize: TabBarIndicatorSize.label,
               labelStyle: GoogleFonts.montserrat(
                 textStyle: TextStyle(
                   fontSize: 40.sp,
@@ -42,12 +42,8 @@ class _MoviePageState extends State<MoviePage> {
               ),
               isScrollable: true,
               unselectedLabelColor: Colors.white54,
-              labelColor: const Color(0XFFEEEEEE),
-              indicator: const MD2Indicator(
-                indicatorHeight: 3,
-                indicatorColor: const Color(0XFFEB4B1F),
-                indicatorSize: MD2IndicatorSize.normal,
-              ),
+              indicatorColor: Colors.transparent,
+              labelColor: const Color(0XFFEB4B1F),
               tabs: const <Tab>[
                 Tab(text: "IN THEATERS"),
                 Tab(text: "POPULAR"),
