@@ -31,6 +31,17 @@ ignore:
   - "lib/src/ui/discover_tv_shows/bloc/discover_tv_show_bloc.freezed.dart"
   - "lib/src/ui/discover_tv_shows/pages"
   - "lib/src/ui/discover_tv_shows/widgets"
-
-
-
+  - "lib/src/data/models/core/backdrops/backdrop_model.freezed.dart"
+  - "lib/src/data/models/core/casts/cast_model.freezed.dart"
+  - "lib/src/data/models/core/credits/credit_model.freezed.dart"
+  - "lib/src/data/models/core/genres/genre_model.freezed.dart"
+  - "lib/src/data/models/core/images/image_model.freezed.dart"
+  - "lib/src/data/models/core/posters/poster_model.freezed.dart"
+  - "lib/src/data/models/core/production_companies/production_company_model.freezed.dart"
+  - "lib/src/data/models/core/reviews/review_model.freezed.dart"
+  - "lib/src/data/models/core/reviews/review_result_model.freezed.dart"
+  - "lib/src/data/models/core/videos/video_model.freezed.dart"
+  - "lib/src/data/models/core/videos/video_result_model.freezed.dart"
+  - "lib/src/data/models/core/detail_movies/detail_movie_model.freezed.dart"
+  - "lib/src/data/models/core/detail_movies/production_country_model.freezed.dart"
+  - "lib/src/data/models/core/detail_movies/similar_movie_model.freezed.dart"
