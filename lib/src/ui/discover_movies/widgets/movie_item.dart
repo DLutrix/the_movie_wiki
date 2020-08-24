@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:smooth_star_rating/smooth_star_rating.dart';
 
-import '../../../core/base_url.dart';
+import '../../../core/constant/base_url.dart';
 import '../../../core/extension/extension_helper.dart';
 import '../../core/widgets/error_image.dart';
 import '../../core/widgets/image_loader.dart';
@@ -84,8 +84,6 @@ class _ArticleDescription extends StatelessWidget {
   final String title;
   final double voteAverage;
   final int voteCount;
-
-  // final parsedDate = DateFormat.yMd('en_US').parse(releaseDate)
 
   @override
   Widget build(BuildContext context) {
