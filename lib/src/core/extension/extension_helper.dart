@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:intl/intl.dart';
 
 import '../error/failure.dart';
@@ -23,5 +24,17 @@ extension Stringx on String {
     return this == null
         ? '-'
         : DateFormat.yMMMd().format(DateTime.parse(this.replaceAll('-', '')));
+  }
+}
+
+extension NumberFormatX on int {
+  String toCurrency({
+    @required String locale,
+    @required String symbol,
+  }) {
+    return NumberFormat.currency(
+      locale: locale,
+      symbol: symbol,
+    ).format(this);
   }
 }
