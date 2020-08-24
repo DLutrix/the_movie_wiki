@@ -16,7 +16,7 @@ part 'detail_movie_model.g.dart';
 @freezed
 abstract class DetailMovieModel with _$DetailMovieModel {
   const factory DetailMovieModel({
-    @nullable @required double budget,
+    @nullable @required int budget,
     @nullable @required List<GenreModel> genres,
     @nullable @required String homepage,
     @JsonKey(name: 'imdb_id') @nullable @required String imdbId,
@@ -34,8 +34,8 @@ abstract class DetailMovieModel with _$DetailMovieModel {
     @nullable
     @required
         List<ProductionCountryModel> productionCountries,
-    @nullable @required double revenue,
-    @nullable @required double runtime,
+    @nullable @required int revenue,
+    @nullable @required int runtime,
     @nullable @required String status,
     @nullable @required String tagline,
     @nullable @required VideoModel videos,

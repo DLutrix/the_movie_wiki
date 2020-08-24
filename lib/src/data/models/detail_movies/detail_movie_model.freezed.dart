@@ -19,7 +19,7 @@ class _$DetailMovieModelTearOff {
   _DetailMovieModel call(
       {@required
       @nullable
-          double budget,
+          int budget,
       @required
       @nullable
           List<GenreModel> genres,
@@ -51,10 +51,10 @@ class _$DetailMovieModelTearOff {
           List<ProductionCountryModel> productionCountries,
       @required
       @nullable
-          double revenue,
+          int revenue,
       @required
       @nullable
-          double runtime,
+          int runtime,
       @required
       @nullable
           String status,
@@ -104,7 +104,7 @@ const $DetailMovieModel = _$DetailMovieModelTearOff();
 
 mixin _$DetailMovieModel {
   @nullable
-  double get budget;
+  int get budget;
   @nullable
   List<GenreModel> get genres;
   @nullable
@@ -127,9 +127,9 @@ mixin _$DetailMovieModel {
   @nullable
   List<ProductionCountryModel> get productionCountries;
   @nullable
-  double get revenue;
+  int get revenue;
   @nullable
-  double get runtime;
+  int get runtime;
   @nullable
   String get status;
   @nullable
@@ -155,7 +155,7 @@ abstract class $DetailMovieModelCopyWith<$Res> {
       _$DetailMovieModelCopyWithImpl<$Res>;
   $Res call(
       {@nullable
-          double budget,
+          int budget,
       @nullable
           List<GenreModel> genres,
       @nullable
@@ -178,9 +178,9 @@ abstract class $DetailMovieModelCopyWith<$Res> {
       @nullable
           List<ProductionCountryModel> productionCountries,
       @nullable
-          double revenue,
+          int revenue,
       @nullable
-          double runtime,
+          int runtime,
       @nullable
           String status,
       @nullable
@@ -233,7 +233,7 @@ class _$DetailMovieModelCopyWithImpl<$Res>
     Object reviews = freezed,
   }) {
     return _then(_value.copyWith(
-      budget: budget == freezed ? _value.budget : budget as double,
+      budget: budget == freezed ? _value.budget : budget as int,
       genres: genres == freezed ? _value.genres : genres as List<GenreModel>,
       homepage: homepage == freezed ? _value.homepage : homepage as String,
       imdbId: imdbId == freezed ? _value.imdbId : imdbId as String,
@@ -251,8 +251,8 @@ class _$DetailMovieModelCopyWithImpl<$Res>
       productionCountries: productionCountries == freezed
           ? _value.productionCountries
           : productionCountries as List<ProductionCountryModel>,
-      revenue: revenue == freezed ? _value.revenue : revenue as double,
-      runtime: runtime == freezed ? _value.runtime : runtime as double,
+      revenue: revenue == freezed ? _value.revenue : revenue as int,
+      runtime: runtime == freezed ? _value.runtime : runtime as int,
       status: status == freezed ? _value.status : status as String,
       tagline: tagline == freezed ? _value.tagline : tagline as String,
       videos: videos == freezed ? _value.videos : videos as VideoModel,
@@ -323,7 +323,7 @@ abstract class _$DetailMovieModelCopyWith<$Res>
   @override
   $Res call(
       {@nullable
-          double budget,
+          int budget,
       @nullable
           List<GenreModel> genres,
       @nullable
@@ -346,9 +346,9 @@ abstract class _$DetailMovieModelCopyWith<$Res>
       @nullable
           List<ProductionCountryModel> productionCountries,
       @nullable
-          double revenue,
+          int revenue,
       @nullable
-          double runtime,
+          int runtime,
       @nullable
           String status,
       @nullable
@@ -408,7 +408,7 @@ class __$DetailMovieModelCopyWithImpl<$Res>
     Object reviews = freezed,
   }) {
     return _then(_DetailMovieModel(
-      budget: budget == freezed ? _value.budget : budget as double,
+      budget: budget == freezed ? _value.budget : budget as int,
       genres: genres == freezed ? _value.genres : genres as List<GenreModel>,
       homepage: homepage == freezed ? _value.homepage : homepage as String,
       imdbId: imdbId == freezed ? _value.imdbId : imdbId as String,
@@ -426,8 +426,8 @@ class __$DetailMovieModelCopyWithImpl<$Res>
       productionCountries: productionCountries == freezed
           ? _value.productionCountries
           : productionCountries as List<ProductionCountryModel>,
-      revenue: revenue == freezed ? _value.revenue : revenue as double,
-      runtime: runtime == freezed ? _value.runtime : runtime as double,
+      revenue: revenue == freezed ? _value.revenue : revenue as int,
+      runtime: runtime == freezed ? _value.runtime : runtime as int,
       status: status == freezed ? _value.status : status as String,
       tagline: tagline == freezed ? _value.tagline : tagline as String,
       videos: videos == freezed ? _value.videos : videos as VideoModel,
@@ -508,7 +508,7 @@ class _$_DetailMovieModel implements _DetailMovieModel {
 
   @override
   @nullable
-  final double budget;
+  final int budget;
   @override
   @nullable
   final List<GenreModel> genres;
@@ -540,10 +540,10 @@ class _$_DetailMovieModel implements _DetailMovieModel {
   final List<ProductionCountryModel> productionCountries;
   @override
   @nullable
-  final double revenue;
+  final int revenue;
   @override
   @nullable
-  final double runtime;
+  final int runtime;
   @override
   @nullable
   final String status;
@@ -660,7 +660,7 @@ abstract class _DetailMovieModel implements DetailMovieModel {
   const factory _DetailMovieModel(
       {@required
       @nullable
-          double budget,
+          int budget,
       @required
       @nullable
           List<GenreModel> genres,
@@ -692,10 +692,10 @@ abstract class _DetailMovieModel implements DetailMovieModel {
           List<ProductionCountryModel> productionCountries,
       @required
       @nullable
-          double revenue,
+          int revenue,
       @required
       @nullable
-          double runtime,
+          int runtime,
       @required
       @nullable
           String status,
@@ -723,7 +723,7 @@ abstract class _DetailMovieModel implements DetailMovieModel {
 
   @override
   @nullable
-  double get budget;
+  int get budget;
   @override
   @nullable
   List<GenreModel> get genres;
@@ -755,10 +755,10 @@ abstract class _DetailMovieModel implements DetailMovieModel {
   List<ProductionCountryModel> get productionCountries;
   @override
   @nullable
-  double get revenue;
+  int get revenue;
   @override
   @nullable
-  double get runtime;
+  int get runtime;
   @override
   @nullable
   String get status;

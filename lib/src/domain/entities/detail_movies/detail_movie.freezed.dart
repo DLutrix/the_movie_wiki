@@ -14,7 +14,7 @@ class _$DetailMovieTearOff {
 
 // ignore: unused_element
   _DetailMovie call(
-      {@required @nullable double budget,
+      {@required @nullable int budget,
       @required @nullable List<Genre> genres,
       @required @nullable String homepage,
       @required @nullable String imdbId,
@@ -23,8 +23,8 @@ class _$DetailMovieTearOff {
       @required @nullable double popularity,
       @required @nullable List<ProductionCompany> productionCompanies,
       @required @nullable List<ProductionCountry> productionCountries,
-      @required @nullable double revenue,
-      @required @nullable double runtime,
+      @required @nullable int revenue,
+      @required @nullable int runtime,
       @required @nullable String status,
       @required @nullable String tagline,
       @required @nullable Video videos,
@@ -60,7 +60,7 @@ const $DetailMovie = _$DetailMovieTearOff();
 
 mixin _$DetailMovie {
   @nullable
-  double get budget;
+  int get budget;
   @nullable
   List<Genre> get genres;
   @nullable
@@ -78,9 +78,9 @@ mixin _$DetailMovie {
   @nullable
   List<ProductionCountry> get productionCountries;
   @nullable
-  double get revenue;
+  int get revenue;
   @nullable
-  double get runtime;
+  int get runtime;
   @nullable
   String get status;
   @nullable
@@ -104,7 +104,7 @@ abstract class $DetailMovieCopyWith<$Res> {
           DetailMovie value, $Res Function(DetailMovie) then) =
       _$DetailMovieCopyWithImpl<$Res>;
   $Res call(
-      {@nullable double budget,
+      {@nullable int budget,
       @nullable List<Genre> genres,
       @nullable String homepage,
       @nullable String imdbId,
@@ -113,8 +113,8 @@ abstract class $DetailMovieCopyWith<$Res> {
       @nullable double popularity,
       @nullable List<ProductionCompany> productionCompanies,
       @nullable List<ProductionCountry> productionCountries,
-      @nullable double revenue,
-      @nullable double runtime,
+      @nullable int revenue,
+      @nullable int runtime,
       @nullable String status,
       @nullable String tagline,
       @nullable Video videos,
@@ -159,7 +159,7 @@ class _$DetailMovieCopyWithImpl<$Res> implements $DetailMovieCopyWith<$Res> {
     Object reviews = freezed,
   }) {
     return _then(_value.copyWith(
-      budget: budget == freezed ? _value.budget : budget as double,
+      budget: budget == freezed ? _value.budget : budget as int,
       genres: genres == freezed ? _value.genres : genres as List<Genre>,
       homepage: homepage == freezed ? _value.homepage : homepage as String,
       imdbId: imdbId == freezed ? _value.imdbId : imdbId as String,
@@ -177,8 +177,8 @@ class _$DetailMovieCopyWithImpl<$Res> implements $DetailMovieCopyWith<$Res> {
       productionCountries: productionCountries == freezed
           ? _value.productionCountries
           : productionCountries as List<ProductionCountry>,
-      revenue: revenue == freezed ? _value.revenue : revenue as double,
-      runtime: runtime == freezed ? _value.runtime : runtime as double,
+      revenue: revenue == freezed ? _value.revenue : revenue as int,
+      runtime: runtime == freezed ? _value.runtime : runtime as int,
       status: status == freezed ? _value.status : status as String,
       tagline: tagline == freezed ? _value.tagline : tagline as String,
       videos: videos == freezed ? _value.videos : videos as Video,
@@ -247,7 +247,7 @@ abstract class _$DetailMovieCopyWith<$Res>
       __$DetailMovieCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@nullable double budget,
+      {@nullable int budget,
       @nullable List<Genre> genres,
       @nullable String homepage,
       @nullable String imdbId,
@@ -256,8 +256,8 @@ abstract class _$DetailMovieCopyWith<$Res>
       @nullable double popularity,
       @nullable List<ProductionCompany> productionCompanies,
       @nullable List<ProductionCountry> productionCountries,
-      @nullable double revenue,
-      @nullable double runtime,
+      @nullable int revenue,
+      @nullable int runtime,
       @nullable String status,
       @nullable String tagline,
       @nullable Video videos,
@@ -309,7 +309,7 @@ class __$DetailMovieCopyWithImpl<$Res> extends _$DetailMovieCopyWithImpl<$Res>
     Object reviews = freezed,
   }) {
     return _then(_DetailMovie(
-      budget: budget == freezed ? _value.budget : budget as double,
+      budget: budget == freezed ? _value.budget : budget as int,
       genres: genres == freezed ? _value.genres : genres as List<Genre>,
       homepage: homepage == freezed ? _value.homepage : homepage as String,
       imdbId: imdbId == freezed ? _value.imdbId : imdbId as String,
@@ -327,8 +327,8 @@ class __$DetailMovieCopyWithImpl<$Res> extends _$DetailMovieCopyWithImpl<$Res>
       productionCountries: productionCountries == freezed
           ? _value.productionCountries
           : productionCountries as List<ProductionCountry>,
-      revenue: revenue == freezed ? _value.revenue : revenue as double,
-      runtime: runtime == freezed ? _value.runtime : runtime as double,
+      revenue: revenue == freezed ? _value.revenue : revenue as int,
+      runtime: runtime == freezed ? _value.runtime : runtime as int,
       status: status == freezed ? _value.status : status as String,
       tagline: tagline == freezed ? _value.tagline : tagline as String,
       videos: videos == freezed ? _value.videos : videos as Video,
@@ -363,7 +363,7 @@ class _$_DetailMovie implements _DetailMovie {
 
   @override
   @nullable
-  final double budget;
+  final int budget;
   @override
   @nullable
   final List<Genre> genres;
@@ -390,10 +390,10 @@ class _$_DetailMovie implements _DetailMovie {
   final List<ProductionCountry> productionCountries;
   @override
   @nullable
-  final double revenue;
+  final int revenue;
   @override
   @nullable
-  final double runtime;
+  final int runtime;
   @override
   @nullable
   final String status;
@@ -503,7 +503,7 @@ class _$_DetailMovie implements _DetailMovie {
 
 abstract class _DetailMovie implements DetailMovie {
   const factory _DetailMovie(
-      {@required @nullable double budget,
+      {@required @nullable int budget,
       @required @nullable List<Genre> genres,
       @required @nullable String homepage,
       @required @nullable String imdbId,
@@ -512,8 +512,8 @@ abstract class _DetailMovie implements DetailMovie {
       @required @nullable double popularity,
       @required @nullable List<ProductionCompany> productionCompanies,
       @required @nullable List<ProductionCountry> productionCountries,
-      @required @nullable double revenue,
-      @required @nullable double runtime,
+      @required @nullable int revenue,
+      @required @nullable int runtime,
       @required @nullable String status,
       @required @nullable String tagline,
       @required @nullable Video videos,
@@ -524,7 +524,7 @@ abstract class _DetailMovie implements DetailMovie {
 
   @override
   @nullable
-  double get budget;
+  int get budget;
   @override
   @nullable
   List<Genre> get genres;
@@ -551,10 +551,10 @@ abstract class _DetailMovie implements DetailMovie {
   List<ProductionCountry> get productionCountries;
   @override
   @nullable
-  double get revenue;
+  int get revenue;
   @override
   @nullable
-  double get runtime;
+  int get runtime;
   @override
   @nullable
   String get status;

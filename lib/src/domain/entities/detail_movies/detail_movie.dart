@@ -14,7 +14,7 @@ part 'detail_movie.freezed.dart';
 @freezed
 abstract class DetailMovie with _$DetailMovie {
   const factory DetailMovie({
-    @nullable @required double budget,
+    @nullable @required int budget,
     @nullable @required List<Genre> genres,
     @nullable @required String homepage,
     @nullable @required String imdbId,
@@ -23,8 +23,8 @@ abstract class DetailMovie with _$DetailMovie {
     @nullable @required double popularity,
     @nullable @required List<ProductionCompany> productionCompanies,
     @nullable @required List<ProductionCountry> productionCountries,
-    @nullable @required double revenue,
-    @nullable @required double runtime,
+    @nullable @required int revenue,
+    @nullable @required int runtime,
     @nullable @required String status,
     @nullable @required String tagline,
     @nullable @required Video videos,

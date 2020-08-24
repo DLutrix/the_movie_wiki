@@ -8,7 +8,7 @@ part of 'detail_movie_model.dart';
 
 _$_DetailMovieModel _$_$_DetailMovieModelFromJson(Map<String, dynamic> json) {
   return _$_DetailMovieModel(
-    budget: (json['budget'] as num)?.toDouble(),
+    budget: json['budget'] as int,
     genres: (json['genres'] as List)
         ?.map((e) =>
             e == null ? null : GenreModel.fromJson(e as Map<String, dynamic>))
@@ -28,8 +28,8 @@ _$_DetailMovieModel _$_$_DetailMovieModelFromJson(Map<String, dynamic> json) {
             ? null
             : ProductionCountryModel.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    revenue: (json['revenue'] as num)?.toDouble(),
-    runtime: (json['runtime'] as num)?.toDouble(),
+    revenue: json['revenue'] as int,
+    runtime: json['runtime'] as int,
     status: json['status'] as String,
     tagline: json['tagline'] as String,
     videos: json['videos'] == null
