@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
-import 'package:the_movie_wiki/src/core/api_key.dart';
+import 'package:the_movie_wiki/src/core/constant/api_key.dart';
 import 'package:the_movie_wiki/src/core/error/exception.dart';
 import 'package:the_movie_wiki/src/data/datasource/discover_tv_shows/discover_tv_show_remote_data_source.dart';
 import 'package:the_movie_wiki/src/data/models/discover_tv_shows/discover_tv_show_model.dart';

@@ -2,7 +2,7 @@ import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:injectable/injectable.dart';
 
-import '../../../core/api_key.dart';
+import '../../../core/constant/api_key.dart';
 import '../../../core/error/exception.dart';
 import '../../models/detail_movies/detail_movie_model.dart';
 

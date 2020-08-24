@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:injectable/injectable.dart';
 
-import '../../../core/api_key.dart';
+import '../../../core/constant/api_key.dart';
 import '../../../core/error/exception.dart';
 import '../../models/discover_tv_shows/discover_tv_show_model.dart';
 
