@@ -45,3 +45,4 @@ ignore:
   - "lib/src/data/models/detail_movies/detail_movie_model.freezed.dart"
   - "lib/src/data/models/detail_movies/production_country_model.freezed.dart"
   - "lib/src/data/models/detail_movies/similar_movie_model.freezed.dart"
+  - "lib/src/ui/detail_movies/bloc/detail_movie_bloc.freezed.dart"
