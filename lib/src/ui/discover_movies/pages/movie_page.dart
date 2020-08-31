@@ -29,7 +29,7 @@ class _MoviePageState extends State<MoviePage> {
         appBar: AppBar(
           shape: Border(bottom: BorderSide(color: Colors.white10)),
           brightness: Brightness.dark,
-          elevation: 8,
+          elevation: 0,
           backgroundColor: const Color(0XFF0D0C11),
           title: Material(
             color: const Color(0XFF0D0C11),
@@ -41,9 +41,14 @@ class _MoviePageState extends State<MoviePage> {
                 ),
               ),
               isScrollable: true,
+              indicatorSize: TabBarIndicatorSize.label,
               unselectedLabelColor: Colors.white54,
-              indicatorColor: Colors.transparent,
-              labelColor: const Color(0XFFEB4B1F),
+              labelColor: Color(0XFFEEEEEE),
+              indicator: MD2Indicator(
+                indicatorHeight: 3,
+                indicatorColor: Color(0XFFEB4B1F),
+                indicatorSize: MD2IndicatorSize.normal,
+              ),
               tabs: const <Tab>[
                 Tab(text: "IN THEATERS"),
                 Tab(text: "POPULAR"),

@@ -30,9 +30,9 @@ class _TvShowPageState extends State<TvShowPage> {
           shape: Border(bottom: BorderSide(color: Colors.white10)),
           brightness: Brightness.dark,
           elevation: 0,
-          backgroundColor: const Color(0XFF0C0B10),
+          backgroundColor: const Color(0XFF0D0C11),
           title: Material(
-            color: const Color(0XFF0C0B10),
+            color: const Color(0XFF0D0C11),
             child: TabBar(
               labelStyle: GoogleFonts.montserrat(
                 textStyle: TextStyle(
@@ -41,9 +41,14 @@ class _TvShowPageState extends State<TvShowPage> {
                 ),
               ),
               isScrollable: true,
+              indicatorSize: TabBarIndicatorSize.label,
               unselectedLabelColor: Colors.white54,
-              indicatorColor: Colors.transparent,
-              labelColor: const Color(0XFFEB4B1F),
+              labelColor: Color(0XFFEEEEEE),
+              indicator: MD2Indicator(
+                indicatorHeight: 3,
+                indicatorColor: Color(0XFFEB4B1F),
+                indicatorSize: MD2IndicatorSize.normal,
+              ),
               tabs: const <Tab>[
                 Tab(text: "AIRING TODAY"),
                 Tab(text: "ON TV"),

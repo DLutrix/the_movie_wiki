@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:overlay_support/overlay_support.dart';
-import 'package:the_movie_wiki/src/ui/discover_movies/widgets/movie_loaded_state.dart';
 
 import '../../core/widgets/error_state.dart';
 import '../../core/widgets/initial_state.dart';
 import '../../core/widgets/loading_state.dart';
 import '../bloc/discover_movie_bloc.dart';
+import '../widgets/movie_loaded_state.dart';
 
 class NowPlayingMoviePage extends StatefulWidget {
   const NowPlayingMoviePage({
@@ -59,6 +59,7 @@ class _NowPlayingMoviePageState extends State<NowPlayingMoviePage>
   void _onScroll() {
     final _position = _scrollController.position;
     if (_position.pixels == _position.maxScrollExtent && _isFetch) {
+      debugPrint("ok");
       blocInit();
     }
   }
@@ -92,8 +93,8 @@ class _NowPlayingMoviePageState extends State<NowPlayingMoviePage>
             initial: (_) => const InitialState(),
             loading: (_) => const LoadingState(),
             loaded: (state) => MovieLoadedState(
-              scrollController: _scrollController,
               state: state,
+              scrollController: _scrollController,
               onPressed: blocRetry,
             ),
             error: (state) => ErrorState(
