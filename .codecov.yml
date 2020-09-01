@@ -46,7 +46,7 @@ ignore:
   - "lib/src/data/models/detail_movies/production_country_model.freezed.dart"
   - "lib/src/data/models/detail_movies/similar_movie_model.freezed.dart"
   - "lib/src/ui/detail_movies/bloc/detail_movie_bloc.freezed.dart"
-  - "lib/src/data/models/detail_tv_shows/detail_show_model.freezed.dart"
+  - "lib/src/data/models/detail_tv_shows/detail_tv_show_model.freezed.dart"
   - "lib/src/data/models/detail_tv_shows/episode_to_air_model.freezed.dart"
   - "lib/src/data/models/detail_tv_shows/network_model.freezed.dart"
   - "lib/src/data/models/detail_tv_shows/season_model.freezed.dart"
