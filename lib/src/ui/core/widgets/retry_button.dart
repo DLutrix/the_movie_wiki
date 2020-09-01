@@ -13,7 +13,7 @@ class RetryButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Padding(
-        padding: const EdgeInsets.fromLTRB(8, 16, 16, 0),
+        padding: const EdgeInsets.fromLTRB(8, 16, 16, 32),
         child: OutlineButton.icon(
           color: const Color(0XFFEB4B1F),
           onPressed: _onPressed,
