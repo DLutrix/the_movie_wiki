@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
+import 'package:injectable/injectable.dart';
 
 import '../../../core/constant/api_key.dart';
 import '../../../core/error/exception.dart';
@@ -9,6 +10,7 @@ abstract class DetailTvShowRemoteDataSource {
   Future<DetailTvShowModel> getDetailTvShow({@required int id});
 }
 
+@LazySingleton(as: DetailTvShowRemoteDataSource)
 class DetailTvShowRemotelDataSourceImpl
     implements DetailTvShowRemoteDataSource {
   final Dio _dio;
