@@ -1,6 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import '../../../domain/entities/detail_tv_shows/network.dart';
+import '../../../../domain/entities/core/networks/network.dart';
 
 part 'network_model.freezed.dart';
 part 'network_model.g.dart';

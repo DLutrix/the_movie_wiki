@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:the_movie_wiki/src/data/models/core/similar_tv_shows/similar_tv_show_model.dart';
 
 import '../../../domain/entities/detail_tv_shows/detail_tv_show.dart';
 import '../core/credits/credit_model.dart';
@@ -7,10 +8,9 @@ import '../core/images/image_model.dart';
 import '../core/production_companies/production_company_model.dart';
 import '../core/reviews/review_model.dart';
 import '../core/videos/video_model.dart';
-import 'episode_to_air_model.dart';
-import 'network_model.dart';
-import 'season_model.dart';
-import 'similar_tv_show_model.dart';
+import '../core/episode_to_airs/episode_to_air_model.dart';
+import '../core/networks/network_model.dart';
+import '../core/seasons/season_model.dart';
 
 part 'detail_tv_show_model.freezed.dart';
 part 'detail_tv_show_model.g.dart';

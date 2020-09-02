@@ -1,6 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import '../discover_tv_shows/tv_show_result.dart';
+import '../../discover_tv_shows/tv_show_result.dart';
 
 part 'similar_tv_show.freezed.dart';
 

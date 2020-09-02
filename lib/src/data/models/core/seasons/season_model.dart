@@ -1,6 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import '../../../domain/entities/detail_tv_shows/season.dart';
+import '../../../../domain/entities/core/seasons/season.dart';
 
 part 'season_model.freezed.dart';
 part 'season_model.g.dart';

@@ -1,6 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import '../../../domain/entities/detail_tv_shows/episode_to_air.dart';
+import '../../../../domain/entities/core/episode_to_airs/episode_to_air.dart';
 
 part 'episode_to_air_model.freezed.dart';
 part 'episode_to_air_model.g.dart';

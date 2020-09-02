@@ -1,6 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import '../../../domain/entities/detail_movies/production_country.dart';
+import '../../../../domain/entities/core/production_countries/production_country.dart';
 
 part 'production_country_model.freezed.dart';
 part 'production_country_model.g.dart';

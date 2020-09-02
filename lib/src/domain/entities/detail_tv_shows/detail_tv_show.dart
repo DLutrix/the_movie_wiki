@@ -1,6 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:the_movie_wiki/src/domain/entities/detail_tv_shows/season.dart';
-import 'package:the_movie_wiki/src/domain/entities/detail_tv_shows/similar_tv_show.dart';
+import 'package:the_movie_wiki/src/domain/entities/core/seasons/season.dart';
+import 'package:the_movie_wiki/src/domain/entities/core/similar_tv_shows/similar_tv_show.dart';
 
 import '../core/credits/credit.dart';
 import '../core/genres/genre.dart';
@@ -8,8 +8,8 @@ import '../core/images/image.dart';
 import '../core/production_companies/production_company.dart';
 import '../core/reviews/review.dart';
 import '../core/videos/video.dart';
-import 'episode_to_air.dart';
-import 'network.dart';
+import '../core/episode_to_airs/episode_to_air.dart';
+import '../core/networks/network.dart';
 
 part 'detail_tv_show.freezed.dart';
 

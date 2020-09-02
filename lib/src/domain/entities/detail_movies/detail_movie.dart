@@ -6,8 +6,8 @@ import '../core/images/image.dart';
 import '../core/production_companies/production_company.dart';
 import '../core/reviews/review.dart';
 import '../core/videos/video.dart';
-import 'production_country.dart';
-import 'similar_movie.dart';
+import '../core/production_countries/production_country.dart';
+import '../core/similar_movies/similar_movie.dart';
 
 part 'detail_movie.freezed.dart';
 

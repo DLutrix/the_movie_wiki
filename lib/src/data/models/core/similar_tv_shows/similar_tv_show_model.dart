@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import '../../../domain/entities/detail_tv_shows/similar_tv_show.dart';
-import '../discover_tv_shows/tv_show_result_model.dart';
+import '../../../../domain/entities/core/similar_tv_shows/similar_tv_show.dart';
+import '../../discover_tv_shows/tv_show_result_model.dart';
 
 part 'similar_tv_show_model.freezed.dart';
 part 'similar_tv_show_model.g.dart';
