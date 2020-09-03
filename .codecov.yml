@@ -51,3 +51,5 @@ ignore:
   - "lib/src/data/models/detail_movies/detail_movie_model.freezed.dart"
   - "lib/src/ui/detail_movies/bloc/detail_movie_bloc.freezed.dart"
   - "lib/src/data/models/detail_tv_shows/detail_tv_show_model.freezed.dart"
+  - "lib/src/ui/detail_tv_shows/bloc/detail_tv_show_bloc.freezed.dart"
+
