@@ -1,7 +1,9 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:the_movie_wiki/src/core/routes/router.gr.dart';
 
-import '../../core/widgets/loading_state.dart';
-import '../../core/widgets/retry_button.dart';
+import '../../core/widgets/state/loading_state.dart';
+import '../../core/widgets/button/retry_button.dart';
 import '../bloc/discover_tv_show_bloc.dart';
 import 'tv_show_item.dart';
 
@@ -39,7 +41,19 @@ class TvShowLoadedState extends StatelessWidget {
                       ? const LoadingState()
                       : const LoadingState()
               : InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    ExtendedNavigator.of(context).push(
+                      Routes.detailTvShowPage,
+                      arguments: DetailTvShowPageArguments(
+                        id: state.results[i].id,
+                        name: state.results[i].name,
+                        posterPath: state.results[i].posterPath,
+                        rating: state.results[i].voteAverage,
+                        overview: state.results[i].overview ?? '',
+                        firstAirDate: state.results[i].firstAirDate,
+                      ),
+                    );
+                  },
                   child: TVShowItem(
                     name: state.results[i].name,
                     overview: state.results[i].overview,

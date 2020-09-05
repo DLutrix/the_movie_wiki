@@ -5,8 +5,8 @@ import 'package:smooth_star_rating/smooth_star_rating.dart';
 
 import '../../../core/constant/base_url.dart';
 import '../../../core/extension/extension_helper.dart';
-import '../../core/widgets/error_image.dart';
-import '../../core/widgets/image_loader.dart';
+import '../../core/widgets/loader/error_image.dart';
+import '../../core/widgets/loader/image_loader.dart';
 
 class MovieItem extends StatelessWidget {
   const MovieItem({

@@ -2,14 +2,14 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:the_movie_wiki/src/ui/detail_tv_shows/bloc/detail_tv_show_bloc.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import '../bloc/detail_movie_bloc.dart';
 import '../../core/widgets/loader/error_image.dart';
 import '../../core/widgets/loader/image_loader.dart';
 
-class MovieTrailerWidget extends StatelessWidget {
-  const MovieTrailerWidget({
+class TvShowTrailerWidget extends StatelessWidget {
+  const TvShowTrailerWidget({
     Key key,
   }) : super(key: key);
 
@@ -24,8 +24,8 @@ class MovieTrailerWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final state = context.bloc<DetailMovieBloc>().state as Loaded;
-    return state.detailMovie.videos.results.isEmpty
+    final state = context.bloc<DetailTvShowBloc>().state as Loaded;
+    return state.detailTvShow.videos.results.isEmpty
         ? const SizedBox()
         : Padding(
             padding: const EdgeInsets.only(top: 16),
@@ -46,7 +46,7 @@ class MovieTrailerWidget extends StatelessWidget {
                       scrollDirection: Axis.horizontal,
                       shrinkWrap: true,
                       itemCount:
-                          state.detailMovie.videos.results.take(10).length,
+                          state.detailTvShow.videos.results.take(10).length,
                       itemBuilder: (_, i) {
                         return Padding(
                           padding: const EdgeInsets.only(right: 8),
@@ -62,7 +62,7 @@ class MovieTrailerWidget extends StatelessWidget {
                                       child: CachedNetworkImage(
                                         fit: BoxFit.fill,
                                         imageUrl: 'http://i3.ytimg.com/vi/' +
-                                            state.detailMovie.videos.results[i]
+                                            state.detailTvShow.videos.results[i]
                                                 .key +
                                             '/hqdefault.jpg',
                                         placeholder: (_, __) {
@@ -77,7 +77,7 @@ class MovieTrailerWidget extends StatelessWidget {
                                       child: InkWell(
                                         onTap: () {
                                           _launchUrl(
-                                            state.detailMovie.videos.results[i]
+                                            state.detailTvShow.videos.results[i]
                                                 .key
                                                 .toString(),
                                           );

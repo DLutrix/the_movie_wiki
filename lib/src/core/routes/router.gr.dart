@@ -12,11 +12,14 @@ import 'package:flutter/material.dart';
 import '../../domain/entities/core/credits/cast.dart';
 import '../../domain/entities/core/reviews/review_result.dart';
 import '../../domain/entities/discover_movies/movie_result.dart';
+import '../../domain/entities/discover_tv_shows/tv_show_result.dart';
 import '../../ui/core/pages/home_page.dart';
 import '../../ui/core/pages/see_all_cast_page.dart';
 import '../../ui/core/pages/see_all_review_page.dart';
 import '../../ui/detail_movies/pages/detail_movie_page.dart';
 import '../../ui/detail_movies/pages/see_all_similar_movie_page.dart';
+import '../../ui/detail_tv_shows/pages/detail_tv_show_page.dart';
+import '../../ui/detail_tv_shows/pages/see_all_similar_tv_show_page.dart';
 
 class Routes {
   static const String homePage = '/';
@@ -24,12 +27,16 @@ class Routes {
   static const String seeAllReviewPage = '/see-all-review-page';
   static const String seeAllCastPage = '/see-all-cast-page';
   static const String seeAllSimilarMoviePage = '/see-all-similar-movie-page';
+  static const String detailTvShowPage = '/detail-tv-show-page';
+  static const String seeAllSimilarTvShowPage = '/see-all-similar-tv-show-page';
   static const all = <String>{
     homePage,
     detailMoviePage,
     seeAllReviewPage,
     seeAllCastPage,
     seeAllSimilarMoviePage,
+    detailTvShowPage,
+    seeAllSimilarTvShowPage,
   };
 }
 
@@ -42,6 +49,8 @@ class Router extends RouterBase {
     RouteDef(Routes.seeAllReviewPage, page: SeeAllReviewPage),
     RouteDef(Routes.seeAllCastPage, page: SeeAllCastPage),
     RouteDef(Routes.seeAllSimilarMoviePage, page: SeeAllSimilarMoviePage),
+    RouteDef(Routes.detailTvShowPage, page: DetailTvShowPage),
+    RouteDef(Routes.seeAllSimilarTvShowPage, page: SeeAllSimilarTvShowPage),
   ];
   @override
   Map<Type, AutoRouteFactory> get pagesMap => _pagesMap;
@@ -116,6 +125,41 @@ class Router extends RouterBase {
         transitionDuration: const Duration(milliseconds: 400),
       );
     },
+    DetailTvShowPage: (data) {
+      final args = data.getArgs<DetailTvShowPageArguments>(
+        orElse: () => DetailTvShowPageArguments(),
+      );
+      return PageRouteBuilder<dynamic>(
+        pageBuilder: (context, animation, secondaryAnimation) =>
+            DetailTvShowPage(
+          key: args.key,
+          id: args.id,
+          overview: args.overview,
+          posterPath: args.posterPath,
+          rating: args.rating,
+          firstAirDate: args.firstAirDate,
+          name: args.name,
+        ),
+        settings: data,
+        transitionsBuilder: TransitionsBuilders.fadeIn,
+        transitionDuration: const Duration(milliseconds: 400),
+      );
+    },
+    SeeAllSimilarTvShowPage: (data) {
+      final args = data.getArgs<SeeAllSimilarTvShowPageArguments>(
+        orElse: () => SeeAllSimilarTvShowPageArguments(),
+      );
+      return PageRouteBuilder<dynamic>(
+        pageBuilder: (context, animation, secondaryAnimation) =>
+            SeeAllSimilarTvShowPage(
+          key: args.key,
+          similar: args.similar,
+        ),
+        settings: data,
+        transitionsBuilder: TransitionsBuilders.slideLeftWithFade,
+        transitionDuration: const Duration(milliseconds: 400),
+      );
+    },
   };
 }
 
@@ -161,4 +205,30 @@ class SeeAllSimilarMoviePageArguments {
   final Key key;
   final List<MovieResult> similar;
   SeeAllSimilarMoviePageArguments({this.key, this.similar});
+}
+
+/// DetailTvShowPage arguments holder class
+class DetailTvShowPageArguments {
+  final Key key;
+  final int id;
+  final String overview;
+  final String posterPath;
+  final double rating;
+  final String firstAirDate;
+  final String name;
+  DetailTvShowPageArguments(
+      {this.key,
+      this.id,
+      this.overview,
+      this.posterPath,
+      this.rating,
+      this.firstAirDate,
+      this.name});
+}
+
+/// SeeAllSimilarTvShowPage arguments holder class
+class SeeAllSimilarTvShowPageArguments {
+  final Key key;
+  final List<TvShowResult> similar;
+  SeeAllSimilarTvShowPageArguments({this.key, this.similar});
 }

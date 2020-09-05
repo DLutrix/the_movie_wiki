@@ -4,20 +4,20 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../core/routes/router.gr.dart';
 import '../../core/widgets/loader/error_image.dart';
+import '../../../core/routes/router.gr.dart';
 import '../../core/widgets/loader/image_loader.dart';
-import '../bloc/detail_movie_bloc.dart';
+import '../bloc/detail_tv_show_bloc.dart';
 
-class MovieSimilarWidget extends StatelessWidget {
-  const MovieSimilarWidget({
+class TvShowSimilarWidget extends StatelessWidget {
+  const TvShowSimilarWidget({
     Key key,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final state = context.bloc<DetailMovieBloc>().state as Loaded;
-    final similar = state.detailMovie.similar.results;
+    final state = context.bloc<DetailTvShowBloc>().state as Loaded;
+    final similar = state.detailTvShow.similar.results;
     return similar.isEmpty
         ? const SizedBox()
         : Padding(
@@ -32,7 +32,7 @@ class MovieSimilarWidget extends StatelessWidget {
                     padding: const EdgeInsets.only(
                       left: 16,
                       bottom: 32,
-                      top: 8,
+                      top: 16,
                       right: 16,
                     ),
                     child: Row(
@@ -49,16 +49,16 @@ class MovieSimilarWidget extends StatelessWidget {
                             textAlign: TextAlign.start,
                           ),
                         ),
-                        InkWell(
-                          onTap: () {
-                            ExtendedNavigator.of(context).push(
-                              Routes.seeAllSimilarMoviePage,
-                              arguments: SeeAllSimilarMoviePageArguments(
-                                similar: state.detailMovie.similar.results,
-                              ),
-                            );
-                          },
-                          child: Expanded(
+                        Expanded(
+                          child: InkWell(
+                            onTap: () {
+                              ExtendedNavigator.of(context).push(
+                                Routes.seeAllSimilarTvShowPage,
+                                arguments: SeeAllSimilarTvShowPageArguments(
+                                  similar: state.detailTvShow.similar.results,
+                                ),
+                              );
+                            },
                             child: Text(
                               'See all',
                               style: TextStyle(
@@ -95,14 +95,14 @@ class MovieSimilarWidget extends StatelessWidget {
                               child: InkWell(
                                 onTap: () {
                                   ExtendedNavigator.of(context).push(
-                                    Routes.detailMoviePage,
-                                    arguments: DetailMoviePageArguments(
+                                    Routes.detailTvShowPage,
+                                    arguments: DetailTvShowPageArguments(
                                       id: similar[i].id,
-                                      title: similar[i].title,
+                                      name: similar[i].name,
                                       posterPath: similar[i].posterPath,
                                       rating: similar[i].voteAverage,
                                       overview: similar[i].overview ?? '',
-                                      releaseDate: similar[i].releaseDate,
+                                      firstAirDate: similar[i].firstAirDate,
                                     ),
                                   );
                                 },

@@ -6,8 +6,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../core/constant/base_url.dart';
 import '../../../core/routes/router.gr.dart';
-import '../../core/widgets/error_image.dart';
-import '../../core/widgets/image_loader.dart';
+import '../../core/widgets/loader/error_image.dart';
+import '../../core/widgets/loader/image_loader.dart';
 import '../bloc/detail_movie_bloc.dart';
 
 class MovieCastWidget extends StatelessWidget {

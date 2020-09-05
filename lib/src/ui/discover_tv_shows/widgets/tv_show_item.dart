@@ -4,8 +4,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:smooth_star_rating/smooth_star_rating.dart';
 
 import '../../../core/extension/extension_helper.dart';
-import '../../core/widgets/error_image.dart';
-import '../../core/widgets/image_loader.dart';
+import '../../core/widgets/loader/error_image.dart';
+import '../../core/widgets/loader/image_loader.dart';
 
 class TVShowItem extends StatelessWidget {
   const TVShowItem({

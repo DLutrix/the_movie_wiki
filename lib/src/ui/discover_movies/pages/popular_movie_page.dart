@@ -3,9 +3,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:overlay_support/overlay_support.dart';
 import 'package:the_movie_wiki/src/ui/discover_movies/widgets/movie_loaded_state.dart';
 
-import '../../core/widgets/error_state.dart';
-import '../../core/widgets/initial_state.dart';
-import '../../core/widgets/loading_state.dart';
+import '../../core/widgets/state/error_state.dart';
+import '../../core/widgets/state/initial_state.dart';
+import '../../core/widgets/state/loading_state.dart';
 import '../bloc/discover_movie_bloc.dart';
 
 class PopularMoviePage extends StatefulWidget {

@@ -4,21 +4,21 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../core/constant/base_url.dart';
 import '../../../core/routes/router.gr.dart';
 import '../../core/widgets/loader/error_image.dart';
 import '../../core/widgets/loader/image_loader.dart';
-import '../bloc/detail_movie_bloc.dart';
+import '../bloc/detail_tv_show_bloc.dart';
 
-class MovieSimilarWidget extends StatelessWidget {
-  const MovieSimilarWidget({
+class TvShowCastWidget extends StatelessWidget {
+  const TvShowCastWidget({
     Key key,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final state = context.bloc<DetailMovieBloc>().state as Loaded;
-    final similar = state.detailMovie.similar.results;
-    return similar.isEmpty
+    final state = context.bloc<DetailTvShowBloc>().state as Loaded;
+    return state.detailTvShow.credits.cast.isEmpty
         ? const SizedBox()
         : Padding(
             padding: const EdgeInsets.only(top: 16),
@@ -32,14 +32,14 @@ class MovieSimilarWidget extends StatelessWidget {
                     padding: const EdgeInsets.only(
                       left: 16,
                       bottom: 32,
-                      top: 8,
+                      top: 16,
                       right: 16,
                     ),
                     child: Row(
                       children: <Widget>[
                         Expanded(
                           child: Text(
-                            'More like this',
+                            'Cast',
                             style: TextStyle(
                               color: Colors.white,
                               height: 1.5,
@@ -49,16 +49,16 @@ class MovieSimilarWidget extends StatelessWidget {
                             textAlign: TextAlign.start,
                           ),
                         ),
-                        InkWell(
-                          onTap: () {
-                            ExtendedNavigator.of(context).push(
-                              Routes.seeAllSimilarMoviePage,
-                              arguments: SeeAllSimilarMoviePageArguments(
-                                similar: state.detailMovie.similar.results,
-                              ),
-                            );
-                          },
-                          child: Expanded(
+                        Expanded(
+                          child: InkWell(
+                            onTap: () {
+                              ExtendedNavigator.of(context).push(
+                                Routes.seeAllCastPage,
+                                arguments: SeeAllCastPageArguments(
+                                  cast: state.detailTvShow.credits.cast,
+                                ),
+                              );
+                            },
                             child: Text(
                               'See all',
                               style: TextStyle(
@@ -81,7 +81,8 @@ class MovieSimilarWidget extends StatelessWidget {
                       padding: const EdgeInsets.only(left: 14),
                       scrollDirection: Axis.horizontal,
                       shrinkWrap: true,
-                      itemCount: similar.take(10).length,
+                      itemCount:
+                          state.detailTvShow.credits.cast.take(10).length,
                       itemBuilder: (_, i) {
                         return Padding(
                           padding: const EdgeInsets.only(
@@ -92,31 +93,50 @@ class MovieSimilarWidget extends StatelessWidget {
                             aspectRatio: 0.7,
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(12),
-                              child: InkWell(
-                                onTap: () {
-                                  ExtendedNavigator.of(context).push(
-                                    Routes.detailMoviePage,
-                                    arguments: DetailMoviePageArguments(
-                                      id: similar[i].id,
-                                      title: similar[i].title,
-                                      posterPath: similar[i].posterPath,
-                                      rating: similar[i].voteAverage,
-                                      overview: similar[i].overview ?? '',
-                                      releaseDate: similar[i].releaseDate,
+                              child: Stack(
+                                children: [
+                                  Positioned.fill(
+                                    child: CachedNetworkImage(
+                                      fit: BoxFit.fill,
+                                      imageUrl: IMAGE_BASE_URL +
+                                          state.detailTvShow.credits.cast[i]
+                                              .profilePath
+                                              .toString(),
+                                      placeholder: (_, __) {
+                                        return const ImageLoader();
+                                      },
+                                      errorWidget: (_, __, ___) {
+                                        return const ErrorImage();
+                                      },
                                     ),
-                                  );
-                                },
-                                child: CachedNetworkImage(
-                                  fit: BoxFit.fill,
-                                  imageUrl: 'https://image.tmdb.org/t/p/w780/' +
-                                      similar[i].posterPath.toString(),
-                                  placeholder: (_, __) {
-                                    return const ImageLoader();
-                                  },
-                                  errorWidget: (_, __, ___) {
-                                    return const ErrorImage();
-                                  },
-                                ),
+                                  ),
+                                  Positioned(
+                                    top: 140,
+                                    right: 0,
+                                    left: 0,
+                                    bottom: 0,
+                                    child: Container(
+                                      color: Colors.black38,
+                                      child: Padding(
+                                        padding: const EdgeInsets.only(
+                                          left: 8,
+                                          top: 8,
+                                        ),
+                                        child: Text(
+                                          state.detailTvShow.credits.cast[i]
+                                              .name,
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 40.sp,
+                                            height: 1.5,
+                                          ),
+                                          maxLines: 1,
+                                          overflow: TextOverflow.ellipsis,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ],
                               ),
                             ),
                           ),

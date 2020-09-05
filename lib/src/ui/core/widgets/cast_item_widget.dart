@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../domain/entities/core/credits/cast.dart';
-import 'error_image.dart';
-import 'image_loader.dart';
+import 'loader/error_image.dart';
+import 'loader/image_loader.dart';
 
 class CastItemWidget extends StatelessWidget {
   const CastItemWidget({

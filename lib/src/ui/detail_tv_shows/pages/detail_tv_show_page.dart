@@ -14,32 +14,32 @@ import '../../core/widgets/state/error_state.dart';
 import '../../core/widgets/loader/image_loader.dart';
 import '../../core/widgets/state/initial_state.dart';
 import '../../core/widgets/state/loading_state.dart';
-import '../bloc/detail_movie_bloc.dart';
-import '../widgets/detail_movie_body_widget.dart';
+import '../bloc/detail_tv_show_bloc.dart';
+import '../widgets/detail_tv_show_body_widget.dart';
 
-class DetailMoviePage extends StatefulWidget {
-  const DetailMoviePage({
+class DetailTvShowPage extends StatefulWidget {
+  const DetailTvShowPage({
     Key key,
     this.id,
     this.overview,
     this.posterPath,
     this.rating,
-    this.releaseDate,
-    this.title,
+    this.firstAirDate,
+    this.name,
   }) : super(key: key);
 
   final int id;
   final String overview;
   final String posterPath;
   final double rating;
-  final String releaseDate;
-  final String title;
+  final String firstAirDate;
+  final String name;
 
   @override
-  _DetailMoviePageState createState() => _DetailMoviePageState();
+  _DetailTvShowPageState createState() => _DetailTvShowPageState();
 }
 
-class _DetailMoviePageState extends State<DetailMoviePage> {
+class _DetailTvShowPageState extends State<DetailTvShowPage> {
   final ScrollController _scrollController = ScrollController();
   bool _showTitle = false;
 
@@ -76,7 +76,7 @@ class _DetailMoviePageState extends State<DetailMoviePage> {
           _buildSliverAppBar(isScroll, state),
         ];
       },
-      body: DetailMovieBodyWidget(
+      body: DetailTvShowBodyWidget(
         widget: widget,
       ),
     );
@@ -92,7 +92,7 @@ class _DetailMoviePageState extends State<DetailMoviePage> {
       pinned: true,
       expandedHeight: kExpandedHeight,
       title: Text(
-        widget.title,
+        widget.name,
         maxLines: 1,
         overflow: TextOverflow.ellipsis,
         style: GoogleFonts.montserrat(
@@ -149,48 +149,49 @@ class _DetailMoviePageState extends State<DetailMoviePage> {
             );
           },
           blendMode: BlendMode.dstIn,
-          child: Positioned.fill(
-            child: state.detailMovie.images.backdrops.isEmpty
-                ? CachedNetworkImage(
-                    fit: BoxFit.fill,
-                    imageUrl: 'https://image.tmdb.org/t/p/w780/' +
-                        widget.posterPath.toString(),
-                    placeholder: (_, __) {
-                      return const ImageLoader();
-                    },
-                    errorWidget: (_, __, ___) {
-                      return const ErrorImage();
-                    },
-                  )
-                : CarouselSlider.builder(
-                    itemCount:
-                        state.detailMovie.images.backdrops.take(5).length,
-                    itemBuilder: (_, i) {
-                      return CachedNetworkImage(
-                        fit: BoxFit.fill,
-                        imageUrl: 'https://image.tmdb.org/t/p/w780/' +
-                            state.detailMovie.images.backdrops[i].filePath
-                                .toString(),
-                        placeholder: (_, __) {
-                          return const ImageLoader();
-                        },
-                        errorWidget: (_, __, ___) {
-                          return const ErrorImage();
-                        },
-                      );
-                    },
-                    options: CarouselOptions(
-                      aspectRatio: 7 / 6,
-                      viewportFraction: 1,
-                      enableInfiniteScroll: false,
-                      enlargeCenterPage: false,
-                      autoPlay: true,
-                      autoPlayInterval: Duration(seconds: 3),
-                      autoPlayAnimationDuration: Duration(milliseconds: 1000),
-                      autoPlayCurve: Curves.fastOutSlowIn,
+          child: state.detailTvShow.images.backdrops.isEmpty
+              ? CachedNetworkImage(
+                  fit: BoxFit.fill,
+                  imageUrl: 'https://image.tmdb.org/t/p/w780/' +
+                      widget.posterPath.toString(),
+                  placeholder: (_, __) {
+                    return const ImageLoader();
+                  },
+                  errorWidget: (_, __, ___) {
+                    return const ErrorImage();
+                  },
+                )
+              : CarouselSlider.builder(
+                  itemCount: state.detailTvShow.images.backdrops.take(5).length,
+                  itemBuilder: (_, i) {
+                    return CachedNetworkImage(
+                      fit: BoxFit.fill,
+                      imageUrl: 'https://image.tmdb.org/t/p/w780/' +
+                          state.detailTvShow.images.backdrops[i].filePath
+                              .toString(),
+                      placeholder: (_, __) {
+                        return const ImageLoader();
+                      },
+                      errorWidget: (_, __, ___) {
+                        return const ErrorImage();
+                      },
+                    );
+                  },
+                  options: CarouselOptions(
+                    aspectRatio: 7 / 6,
+                    viewportFraction: 1,
+                    enableInfiniteScroll: false,
+                    enlargeCenterPage: false,
+                    autoPlay: true,
+                    autoPlayInterval: const Duration(
+                      seconds: 3,
                     ),
+                    autoPlayAnimationDuration: const Duration(
+                      milliseconds: 1000,
+                    ),
+                    autoPlayCurve: Curves.fastOutSlowIn,
                   ),
-          ),
+                ),
         ),
       ),
     );
@@ -235,7 +236,7 @@ class _DetailMoviePageState extends State<DetailMoviePage> {
                       left: 8,
                     ),
                     child: Text(
-                      widget.title,
+                      widget.name,
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
                       style: GoogleFonts.montserrat(
@@ -273,8 +274,8 @@ class _DetailMoviePageState extends State<DetailMoviePage> {
                       bottom: 16,
                     ),
                     child: Text(
-                      widget.releaseDate != null
-                          ? widget.releaseDate.toDate()
+                      widget.firstAirDate != null
+                          ? widget.firstAirDate.toDate()
                           : '',
                       style: TextStyle(
                         fontSize: 40.sp,
@@ -297,33 +298,34 @@ class _DetailMoviePageState extends State<DetailMoviePage> {
     return Scaffold(
       backgroundColor: Colors.white10,
       body: BlocProvider(
-        create: (context) => getIt<DetailMovieBloc>()
+        create: (context) => getIt<DetailTvShowBloc>()
           ..add(
-            DetailMovieEvent.getData(
+            DetailTvShowEvent.getData(
               id: widget.id,
             ),
           ),
-        child:
-            BlocBuilder<DetailMovieBloc, DetailMovieState>(builder: (_, state) {
-          return state.map(
-            initial: (_) => const InitialState(),
-            loading: (_) => const LoadingState(),
-            loaded: (state) {
-              return _buildNestedScrollView(state);
-            },
-            error: (state) => ErrorState(
-              errorMessage: state.errorMessage,
-              onPressed: () {
-                context.bloc<DetailMovieBloc>()
-                  ..add(
-                    DetailMovieEvent.getData(
-                      id: widget.id,
-                    ),
-                  );
+        child: BlocBuilder<DetailTvShowBloc, DetailTvShowState>(
+          builder: (_, state) {
+            return state.map(
+              initial: (_) => const InitialState(),
+              loading: (_) => const LoadingState(),
+              loaded: (state) {
+                return _buildNestedScrollView(state);
               },
-            ),
-          );
-        }),
+              error: (state) => ErrorState(
+                errorMessage: state.errorMessage,
+                onPressed: () {
+                  context.bloc<DetailTvShowBloc>()
+                    ..add(
+                      DetailTvShowEvent.getData(
+                        id: widget.id,
+                      ),
+                    );
+                },
+              ),
+            );
+          },
+        ),
       ),
     );
   }

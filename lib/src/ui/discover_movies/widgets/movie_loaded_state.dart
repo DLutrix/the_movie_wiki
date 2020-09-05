@@ -2,8 +2,8 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
 import '../../../core/routes/router.gr.dart';
-import '../../core/widgets/loading_state.dart';
-import '../../core/widgets/retry_button.dart';
+import '../../core/widgets/state/loading_state.dart';
+import '../../core/widgets/button/retry_button.dart';
 import '../bloc/discover_movie_bloc.dart';
 import 'movie_item.dart';
 
@@ -47,7 +47,7 @@ class MovieLoadedState extends StatelessWidget {
                         title: state.results[i].title,
                         posterPath: state.results[i].posterPath,
                         rating: state.results[i].voteAverage,
-                        overview: state.results[i].overview ?? '',
+                        overview: state.results[i].overview,
                         releaseDate: state.results[i].releaseDate,
                       ),
                     );
