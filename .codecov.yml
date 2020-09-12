@@ -21,16 +21,14 @@ ignore:
   - "injection.iconfig.dart"
   - "lib/src/domain/entities"
   - "lib/src/ui/core"
+
+  # generated files
   - "lib/src/data/models/discover_movies/discover_movie_model.freezed.dart"
   - "lib/src/data/models/discover_movies/movie_result_model.freezed.dart"
   - "lib/src/ui/discover_movies/bloc/discover_movie_bloc.freezed.dart"
-  - "lib/src/ui/discover_movies/pages"
-  - "lib/src/ui/discover_movies/widgets"
   - "lib/src/data/models/discover_tv_shows/discover_tv_show_model.freezed.dart"
   - "lib/src/data/models/discover_tv_shows/tv_show_result_model.freezed.dart"
   - "lib/src/ui/discover_tv_shows/bloc/discover_tv_show_bloc.freezed.dart"
-  - "lib/src/ui/discover_tv_shows/pages"
-  - "lib/src/ui/discover_tv_shows/widgets"
   - "lib/src/data/models/core/backdrops/backdrop_model.freezed.dart"
   - "lib/src/data/models/core/casts/cast_model.freezed.dart"
   - "lib/src/data/models/core/credits/credit_model.freezed.dart"
@@ -52,4 +50,10 @@ ignore:
   - "lib/src/ui/detail_movies/bloc/detail_movie_bloc.freezed.dart"
   - "lib/src/data/models/detail_tv_shows/detail_tv_show_model.freezed.dart"
   - "lib/src/ui/detail_tv_shows/bloc/detail_tv_show_bloc.freezed.dart"
+  - "lib/src/data/models/favorites/favorite_model.g.dart"
 
+  # UI
+  - "lib/src/ui/discover_movies/pages"
+  - "lib/src/ui/discover_movies/widgets"
+  - "lib/src/ui/discover_tv_shows/pages"
+  - "lib/src/ui/discover_tv_shows/widgets"

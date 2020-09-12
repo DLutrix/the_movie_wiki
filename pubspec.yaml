@@ -60,6 +60,7 @@ dev_dependencies:
   bloc_test: ^7.0.0
   fake_async: ^1.1.0
   moor_generator: ^3.3.1
+  moor_ffi: ^0.8.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

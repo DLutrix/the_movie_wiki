@@ -492,6 +492,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "3.3.1"
+  moor_ffi:
+    dependency: "direct dev"
+    description:
+      name: moor_ffi
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.8.0"
   moor_flutter:
     dependency: "direct main"
     description:
@@ -763,6 +770,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.1.4"
+  sqlite3_flutter_libs:
+    dependency: transitive
+    description:
+      name: sqlite3_flutter_libs
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.2.0"
   sqlparser:
     dependency: transitive
     description:

@@ -4,6 +4,7 @@ addons:
   apt:
     packages:
       - lib32stdc++6
+      - libsqlite3-dev
 install:
   - git clone https://github.com/flutter/flutter.git -b stable
   - ./flutter/bin/flutter doctor
