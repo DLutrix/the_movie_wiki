@@ -9,3 +9,7 @@ class UnexpectedException implements Exception {
 class EmptyResultException implements Exception {
   const EmptyResultException();
 }
+
+class LocalDataSourceException implements Exception {
+  const LocalDataSourceException();
+}
